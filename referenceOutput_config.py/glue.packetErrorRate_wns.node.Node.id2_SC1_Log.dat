@@ -1,0 +1,29 @@
+#  PROBE RESULTS (THIS IS A MAGIC LINE)
+# ---------------------------------------------------------------------------
+# Evaluation: LogEval
+# ---------------------------------------------------------------------------
+#  Name: glue.packetErrorRate_LogEval
+#  Description: No descripton available
+# ---------------------------------------------------------------------------
+#  No active probe
+# ---------------------------------------------------------------------------
+#  Common Statistics 
+#  Minimum: 0.0001900
+#  Maximum: 0.1146663
+#  Trials: 14667
+#  Mean: 0.0600857
+# 
+#  Variance: 0.0032694
+#  Relative variance: 0.9055671
+#  Coefficient of variation: 0.9516129
+#  Standard deviation: 0.0571784
+#  Relative standard deviation: 0.9516129
+# 
+#  Skewness: -0.0929523
+# 
+#  2nd moment: 0.0068794
+#  3rd moment: 0.0007888
+# 
+#  Sum of all values: 881.2775060
+#  (Sum of all values)^2: 100.9007169
+#  (Sum of all values)^3: 11.5698799
