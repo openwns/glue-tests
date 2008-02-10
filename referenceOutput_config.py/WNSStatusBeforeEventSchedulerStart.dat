@@ -1,13 +1,13 @@
         WNS
        =====
                  Status: Simulation is still running
-                     Start: Sun Nov 26 22:24:20 2006
-                       Now: Sun Nov 26 22:24:20 2006
+                     Start: Sun Feb 10 17:36:11 2008
+                       Now: Sun Feb 10 17:36:11 2008
                   Duration:             0:00:00
 
               Simulation time: 0
          Max. simulation time: 10
-                Settling time: 0.1
+                Settling time: 0
 
 
 Debug output
@@ -20,27 +20,27 @@ The following output is read from /proc/self/status
 ----------------------------------------------------------
 Name:	wns-core
 State:	R (running)
-SleepAVG:	68%
-Tgid:	4691
-Pid:	4691
-PPid:	4690
+SleepAVG:	29%
+Tgid:	12843
+Pid:	12843
+PPid:	12841
 TracerPid:	0
 Uid:	2262	2262	2262	2262
 Gid:	1335	1335	1335	1335
 FDSize:	32
-Groups:	100 1002 1278 1287 1293 1303 1305 1310 1312 1314 1330 1331 1335 7030 7031 
-VmPeak:	   65816 kB
-VmSize:	   65816 kB
+Groups:	100 1002 1278 1287 1293 1303 1305 1310 1312 1314 1330 1331 1335 7030 7031 7032 
+VmPeak:	   59996 kB
+VmSize:	   59996 kB
 VmLck:	       0 kB
-VmHWM:	   22848 kB
-VmRSS:	   22848 kB
-VmData:	   21540 kB
-VmStk:	      84 kB
-VmExe:	     664 kB
-VmLib:	   33428 kB
+VmHWM:	   25280 kB
+VmRSS:	   25280 kB
+VmData:	   19620 kB
+VmStk:	      88 kB
+VmExe:	      16 kB
+VmLib:	   38372 kB
 VmPTE:	      96 kB
 Threads:	3
-SigQ:	0/131072
+SigQ:	1/131072
 SigPnd:	0000000000000000
 ShdPnd:	0000000000000000
 SigBlk:	0000000000000000
@@ -49,5 +49,5 @@ SigCgt:	0000000180000422
 CapInh:	0000000000000000
 CapPrm:	0000000000000000
 CapEff:	0000000000000000
-Cpus_allowed:	ffffffff,ffffffff,ffffffff,ffffffff
+Cpus_allowed:	00000000,00000000,00000000,000000ff
 Mems_allowed:	1

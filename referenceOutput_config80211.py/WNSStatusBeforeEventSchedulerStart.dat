@@ -1,13 +1,13 @@
         WNS
        =====
                  Status: Simulation is still running
-                     Start: Thu May  3 11:46:50 2007
-                       Now: Thu May  3 11:46:50 2007
+                     Start: Sun Feb 10 18:03:59 2008
+                       Now: Sun Feb 10 18:03:59 2008
                   Duration:             0:00:00
 
               Simulation time: 0
          Max. simulation time: 10
-                Settling time: 0.1
+                Settling time: 0
 
 
 Debug output
@@ -20,32 +20,32 @@ The following output is read from /proc/self/status
 ----------------------------------------------------------
 Name:	wns-core
 State:	R (running)
-SleepAVG:	67%
-Tgid:	20221
-Pid:	20221
-PPid:	20201
+SleepAVG:	19%
+Tgid:	28891
+Pid:	28891
+PPid:	28112
 TracerPid:	0
-Uid:	2474	2474	2474	2474
-Gid:	1348	1348	1348	1348
+Uid:	2262	2262	2262	2262
+Gid:	1335	1335	1335	1335
 FDSize:	32
-Groups:	100 1002 1278 1332 1337 1348 7031 
-VmPeak:	   82656 kB
-VmSize:	   82656 kB
+Groups:	100 1002 1278 1287 1293 1303 1305 1310 1312 1314 1330 1331 1335 7030 7031 7032 
+VmPeak:	   60000 kB
+VmSize:	   60000 kB
 VmLck:	       0 kB
-VmHWM:	   26156 kB
-VmRSS:	   26156 kB
-VmData:	   19224 kB
-VmStk:	      92 kB
-VmExe:	    1116 kB
-VmLib:	   51344 kB
-VmPTE:	     128 kB
+VmHWM:	   25280 kB
+VmRSS:	   25280 kB
+VmData:	   19624 kB
+VmStk:	      88 kB
+VmExe:	      16 kB
+VmLib:	   38372 kB
+VmPTE:	      96 kB
 Threads:	3
-SigQ:	0/131072
+SigQ:	1/131072
 SigPnd:	0000000000000000
 ShdPnd:	0000000000000000
 SigBlk:	0000000000000000
 SigIgn:	0000000001001000
-SigCgt:	0000000180000c22
+SigCgt:	0000000180000422
 CapInh:	0000000000000000
 CapPrm:	0000000000000000
 CapEff:	0000000000000000

@@ -2,7 +2,7 @@
 # ---------------------------------------------------------------------------
 # Evaluation: LogEval
 # ---------------------------------------------------------------------------
-#  Name: glue.packetErrorRate_LogEval
+#  Name: glue.packetErrorRate_Log
 #  Description: No descripton available
 # ---------------------------------------------------------------------------
 #  No active probe

@@ -20,16 +20,16 @@ testSuite.addTest(pywns.WNSUnit.ProbesTestSuite(sandboxPath = os.path.join('..',
                                                 configFile = 'config.py',
                                                 runSimulations = True,
                                                 shortDescription = 'One-on-one communication with: Copper, Glue, IP, Constanze',
-                                                disabled = True,
-                                                disabledReason = "dbn: After ALL NEW IP commit difference to reference output to be clarified with msg"))
+                                                disabled = False,
+                                                disabledReason = ""))
 
 testSuite.addTest(pywns.WNSUnit.ProbesTestSuite(sandboxPath = os.path.join('..', '..', '..', 'sandbox'),
                                                 executeable = "wns-core",
                                                 configFile = 'config80211.py',
                                                 runSimulations = True,
                                                 shortDescription = 'One-on-one communication with: Copper, 802.11, IP, Constanze',
-                                                disabled = True,
-                                                disabledReason = "dbn: After ALL NEW IP commit difference to reference output to be clarified with msg"))
+                                                disabled = False,
+                                                disabledReason = ""))
 
 if __name__ == '__main__':
     # This is only evaluated if the script is called by hand

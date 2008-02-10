@@ -1,19 +1,19 @@
         WNS
        =====
                  Status: Simulation terminated successfully
-                     Start: Thu May  3 11:46:50 2007
-                       Now: Thu May  3 11:48:20 2007
-                  Duration:             0:01:30
+                     Start: Sun Feb 10 18:03:59 2008
+                       Now: Sun Feb 10 18:05:57 2008
+                  Duration:             0:01:58
 
               Simulation time: 10
          Max. simulation time: 10
-                Settling time: 0.1
+                Settling time: 0
 
 
 Debug output
 ----------------------------------------------------------
 Max number of PDUs:     2027
-Current number of PDUs: 1922
+Current number of PDUs: 0
 
 
 The following output is read from /proc/self/status
@@ -21,31 +21,31 @@ The following output is read from /proc/self/status
 Name:	wns-core
 State:	R (running)
 SleepAVG:	0%
-Tgid:	20221
-Pid:	20221
-PPid:	20201
+Tgid:	28891
+Pid:	28891
+PPid:	28112
 TracerPid:	0
-Uid:	2474	2474	2474	2474
-Gid:	1348	1348	1348	1348
+Uid:	2262	2262	2262	2262
+Gid:	1335	1335	1335	1335
 FDSize:	32
-Groups:	100 1002 1278 1332 1337 1348 7031 
-VmPeak:	   85272 kB
-VmSize:	   85268 kB
+Groups:	100 1002 1278 1287 1293 1303 1305 1310 1312 1314 1330 1331 1335 7030 7031 7032 
+VmPeak:	   68296 kB
+VmSize:	   67276 kB
 VmLck:	       0 kB
-VmHWM:	   29036 kB
-VmRSS:	   29036 kB
-VmData:	   21836 kB
-VmStk:	      92 kB
-VmExe:	    1116 kB
-VmLib:	   51344 kB
-VmPTE:	     132 kB
+VmHWM:	   34236 kB
+VmRSS:	   34236 kB
+VmData:	   26900 kB
+VmStk:	      88 kB
+VmExe:	      16 kB
+VmLib:	   38372 kB
+VmPTE:	     116 kB
 Threads:	2
-SigQ:	0/131072
+SigQ:	1/131072
 SigPnd:	0000000000000000
 ShdPnd:	0000000000000000
 SigBlk:	0000000000000000
 SigIgn:	0000000001001000
-SigCgt:	0000000180000c22
+SigCgt:	0000000180000422
 CapInh:	0000000000000000
 CapPrm:	0000000000000000
 CapEff:	0000000000000000

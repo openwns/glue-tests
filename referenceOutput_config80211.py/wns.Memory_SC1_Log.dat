@@ -1,0 +1,29 @@
+#  PROBE RESULTS (THIS IS A MAGIC LINE)
+# ---------------------------------------------------------------------------
+# Evaluation: LogEval
+# ---------------------------------------------------------------------------
+#  Name: wns.Memory_Log
+#  Description: No descripton available
+# ---------------------------------------------------------------------------
+#  No active probe
+# ---------------------------------------------------------------------------
+#  Common Statistics 
+#  Minimum: 43608.0000000
+#  Maximum: 67272.0000000
+#  Trials: 14
+#  Mean: 63218.5714286
+# 
+#  Variance: 52647777.4945057
+#  Relative variance: 0.0131732
+#  Coefficient of variation: 0.1147745
+#  Standard deviation: 7255.8788230
+#  Relative standard deviation: 0.1147745
+# 
+#  Skewness: -1.5884770
+# 
+#  2nd moment: 4045474995.4285712
+#  3rd moment: 261323503067643.4375000
+# 
+#  Sum of all values: 885060.0000000
+#  (Sum of all values)^2: 56636649936.0000000
+#  (Sum of all values)^3: 3658529042947008.0000000
