@@ -5,7 +5,7 @@
 #        Name: traffic.windowedEndToEndIncomingPacketThroughputTrace
 # Description: windowed packet rate [Packet/s]
 # -----------------------------------------------------------
-# Wed Feb 20 21:19:16 2008
+# Thu Jul 31 16:38:53 2008
 1.000000	9228000.00
 1.000000	8232000.00
 2.000000	9324000.00

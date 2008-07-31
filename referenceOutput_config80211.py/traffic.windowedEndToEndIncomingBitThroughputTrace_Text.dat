@@ -5,7 +5,7 @@
 #        Name: traffic.windowedEndToEndIncomingBitThroughputTrace
 # Description: windowed bit rate [Bit/s]
 # -----------------------------------------------------------
-# Wed Feb 20 21:21:31 2008
+# Thu Jul 31 16:21:22 2008
 1.000000	14808000.00
 1.000000	15756000.00
 2.000000	14784000.00
