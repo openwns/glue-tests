@@ -6,6 +6,7 @@ import speetcl.probes
 
 import constanze.Constanze
 import constanze.Node
+import constanze.evaluation.default
 
 import ip.Component
 
@@ -14,9 +15,10 @@ from ip.VirtualARP import VirtualARPServer
 from ip.VirtualDHCP import VirtualDHCPServer
 from ip.VirtualDNS import VirtualDNSServer
 import ip
+import ip.evaluation.default
 
 import glue.support.Configuration
-
+import glue.evaluation.csma
 import copper.Copper
 
 # create an instance of the WNS configuration
@@ -91,7 +93,20 @@ WNS.nodes.append(vdns)
 
 WNS.nodes.append(vdhcp)
 
-# modify probes afterwards
-nodeAccessList = speetcl.probes.AccessList.AccessList('wns.node.Node.id')
-nodeAccessList.addRange(min = 1, max = numberOfStations)
-WNS.modules.glue.probes = glue.support.Configuration.CSMACAComponent.getProbesDict(nodeAccessList)
+glue.evaluation.csma.installEvaluation(WNS, range(1, numberOfStations + 1))
+
+ip.evaluation.default.installEvaluation(sim = WNS,
+                                        maxPacketDelay = 0.5,     # s
+                                        maxPacketSize = 2000*8,   # Bit
+                                        maxBitThroughput = 10E6,  # Bit/s
+                                        maxPacketThroughput = 1E6 # Packets/s
+                                        )
+
+constanze.evaluation.default.installEvaluation(sim = WNS,
+                                               maxPacketDelay = 1.0,
+                                               maxPacketSize = 16000,
+                                               maxBitThroughput = 100e6,
+                                               maxPacketThroughput = 10e6,
+                                               delayResolution = 1000,
+                                               sizeResolution = 2000,
+                                               throughputResolution = 10000)
