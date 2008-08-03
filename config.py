@@ -2,7 +2,6 @@ import wns.WNS
 import wns.EventScheduler
 import wns.Node
 import wns.Distribution
-import speetcl.probes
 
 import constanze.Constanze
 import constanze.Node
