@@ -2,6 +2,7 @@ import wns.WNS
 import wns.EventScheduler
 import wns.Node
 import wns.Distribution
+import wns.evaluation.default
 
 import constanze.Constanze
 import constanze.Node
@@ -131,3 +132,5 @@ constanze.evaluation.default.installEvaluation(sim = WNS,
                                                delayResolution = 1000,
                                                sizeResolution = 2000,
                                                throughputResolution = 10000)
+
+wns.evaluation.default.installEvaluation(sim = WNS)
