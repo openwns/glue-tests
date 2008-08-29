@@ -2,10 +2,10 @@
 # ---------------------------------------------------------------------------
 # Evaluation: PDF
 # ---------------------------------------------------------------------------
-#  Name: glue.broadcastBufferLoss_PDF
-#  Description: No descripton available
+#  Name: glue.broadcastBufferLoss
+#  Description: Loss ratio in broadcast buffer
 # ---------------------------------------------------------------------------
-#  No active probe
+#  Evaluation terminated successfully!
 # ---------------------------------------------------------------------------
 #  Common Statistics 
 #  Minimum: +infinity

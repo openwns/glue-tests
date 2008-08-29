@@ -2,10 +2,10 @@
 # ---------------------------------------------------------------------------
 # Evaluation: PDF
 # ---------------------------------------------------------------------------
-#  Name: glue.broadcastBufferSize_PDF
-#  Description: No descripton available
+#  Name: glue.broadcastBufferSize
+#  Description: Broadcast buffer size
 # ---------------------------------------------------------------------------
-#  No active probe
+#  Evaluation terminated successfully!
 # ---------------------------------------------------------------------------
 #  Common Statistics 
 #  Minimum: +infinity

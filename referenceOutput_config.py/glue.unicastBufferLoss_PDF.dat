@@ -2,31 +2,31 @@
 # ---------------------------------------------------------------------------
 # Evaluation: PDF
 # ---------------------------------------------------------------------------
-#  Name: glue.unicastBufferLoss_PDF
-#  Description: No descripton available
+#  Name: glue.unicastBufferLoss
+#  Description: Loss ratio in unicast buffer
 # ---------------------------------------------------------------------------
-#  No active probe
+#  Evaluation terminated successfully!
 # ---------------------------------------------------------------------------
 #  Common Statistics 
 #  Minimum: 0.0000000
-#  Maximum: 1795.0000000
+#  Maximum: 1810.0000000
 #  Trials: 200
-#  Mean: 1361.8750000
+#  Mean: 1372.9750000
 # 
-#  Variance: 49288.3008794
-#  Relative variance: 0.0265748
-#  Coefficient of variation: 0.1630177
-#  Standard deviation: 222.0096865
-#  Relative standard deviation: 0.1630177
+#  Variance: 49057.0596734
+#  Relative variance: 0.0260241
+#  Coefficient of variation: 0.1613200
+#  Standard deviation: 221.4882834
+#  Relative standard deviation: 0.1613200
 # 
-#  Skewness: -2.6400853
+#  Skewness: -2.7893428
 # 
-#  2nd moment: 1903745.3750000
-#  3rd moment: 2697351915.6250000
+#  2nd moment: 1933872.1250000
+#  3rd moment: 2758884990.6250000
 # 
-#  Sum of all values: 272375.0000000
-#  (Sum of all values)^2: 380749075.0000000
-#  (Sum of all values)^3: 539470383125.0000000
+#  Sum of all values: 274595.0000000
+#  (Sum of all values)^2: 386774425.0000000
+#  (Sum of all values)^3: 551776998125.0000000
 # -----------------------------------------------------------
 # PDF statistics 
 #  Left border of x-axis: 0

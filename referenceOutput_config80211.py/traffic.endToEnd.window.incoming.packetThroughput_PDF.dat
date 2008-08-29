@@ -3,30 +3,30 @@
 # Evaluation: PDF
 # ---------------------------------------------------------------------------
 #  Name: traffic.endToEnd.window.incoming.packetThroughput
-#  Description: averaged packet rate [Packet/s]
+#  Description: average packet rate [Packets/s]
 # ---------------------------------------------------------------------------
-#  No active probe
+#  Evaluation terminated successfully!
 # ---------------------------------------------------------------------------
 #  Common Statistics 
-#  Minimum: 1069.0000000
-#  Maximum: 1536.0000000
+#  Minimum: 1119.0000000
+#  Maximum: 1502.0000000
 #  Trials: 18
-#  Mean: 1294.2222222
+#  Mean: 1292.5000000
 # 
-#  Variance: 10534.5359477
-#  Relative variance: 0.0062892
-#  Coefficient of variation: 0.0793047
-#  Standard deviation: 102.6378875
-#  Relative standard deviation: 0.0793047
+#  Variance: 10978.8529412
+#  Relative variance: 0.0065720
+#  Coefficient of variation: 0.0810677
+#  Standard deviation: 104.7800217
+#  Relative standard deviation: 0.0810677
 # 
-#  Skewness: 0.1327310
+#  Skewness: 0.1298829
 # 
-#  2nd moment: 1684960.4444444
-#  3rd moment: 2206609933.8888888
+#  2nd moment: 1680925.1666667
+#  3rd moment: 2199548840.1666665
 # 
-#  Sum of all values: 23296.0000000
-#  (Sum of all values)^2: 30329288.0000000
-#  (Sum of all values)^3: 39718978810.0000000
+#  Sum of all values: 23265.0000000
+#  (Sum of all values)^2: 30256653.0000000
+#  (Sum of all values)^3: 39591879123.0000000
 # -----------------------------------------------------------
 # PDF statistics 
 #  Left border of x-axis: 0
@@ -40,11 +40,11 @@
 #  Overflows in percent: 0
 # -----------------------------------------------------------
 # Percentiles
-#  P01: 1005.3600000
-#  P05: 1026.8000000
-#  P50: 1268.0000000
-#  P95: 1509.2000000
-#  P99: 1530.6400000
+#  P01: 1005.0200000
+#  P05: 1025.1000000
+#  P50: 1251.0000000
+#  P95: 1476.9000000
+#  P99: 1496.9800000
 # -----------------------------------------------------------
 # 
 # x_n                  F(x_n)           G(x_n)     P(x_n-1 < X    n

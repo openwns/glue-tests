@@ -5,12 +5,12 @@
 #  Name: traffic.endToEnd.packet.incoming.size
 #  Description: packet size [Bit]
 # ---------------------------------------------------------------------------
-#  No active probe
+#  Evaluation terminated successfully!
 # ---------------------------------------------------------------------------
 #  Common Statistics 
 #  Minimum: 12000.0000000
 #  Maximum: 12000.0000000
-#  Trials: 25881
+#  Trials: 25860
 #  Mean: 12000.0000000
 # 
 #  Variance: 0.0000000
@@ -24,9 +24,9 @@
 #  2nd moment: 144000000.0000000
 #  3rd moment: 1728000000000.0000000
 # 
-#  Sum of all values: 310572000.0000000
-#  (Sum of all values)^2: 3726864000000.0000000
-#  (Sum of all values)^3: 44722368000000000.0000000
+#  Sum of all values: 310320000.0000000
+#  (Sum of all values)^2: 3723840000000.0000000
+#  (Sum of all values)^3: 44686080000000000.0000000
 # -----------------------------------------------------------
 # PDF statistics 
 #  Left border of x-axis: 0

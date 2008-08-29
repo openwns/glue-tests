@@ -3,30 +3,30 @@
 # Evaluation: PDF
 # ---------------------------------------------------------------------------
 #  Name: traffic.endToEnd.window.incoming.packetThroughput
-#  Description: averaged packet rate [Packet/s]
+#  Description: average packet rate [Packets/s]
 # ---------------------------------------------------------------------------
-#  No active probe
+#  Evaluation terminated successfully!
 # ---------------------------------------------------------------------------
 #  Common Statistics 
-#  Minimum: 575.0000000
-#  Maximum: 777.0000000
+#  Minimum: 465.0000000
+#  Maximum: 839.0000000
 #  Trials: 18
-#  Mean: 693.6666667
+#  Mean: 686.5000000
 # 
-#  Variance: 3290.2352941
-#  Relative variance: 0.0068379
-#  Coefficient of variation: 0.0826918
-#  Standard deviation: 57.3605726
-#  Relative standard deviation: 0.0826918
+#  Variance: 6830.1470588
+#  Relative variance: 0.0144927
+#  Coefficient of variation: 0.1203856
+#  Standard deviation: 82.6447038
+#  Relative standard deviation: 0.1203856
 # 
-#  Skewness: -0.1580771
+#  Skewness: -0.6816759
 # 
-#  2nd moment: 484280.8888889
-#  3rd moment: 340210737.3333333
+#  2nd moment: 477732.9444444
+#  3rd moment: 336435680.5000000
 # 
-#  Sum of all values: 12486.0000000
-#  (Sum of all values)^2: 8717056.0000000
-#  (Sum of all values)^3: 6123793272.0000000
+#  Sum of all values: 12357.0000000
+#  (Sum of all values)^2: 8599193.0000000
+#  (Sum of all values)^3: 6055842249.0000000
 # -----------------------------------------------------------
 # PDF statistics 
 #  Left border of x-axis: 0
@@ -40,11 +40,11 @@
 #  Overflows in percent: 0
 # -----------------------------------------------------------
 # Percentiles
-#  P01: 7.7700000
-#  P05: 38.8500000
-#  P50: 388.5000000
-#  P95: 738.1500000
-#  P99: 769.2300000
+#  P01: 8.3900000
+#  P05: 41.9500000
+#  P50: 419.5000000
+#  P95: 797.0500000
+#  P99: 830.6100000
 # -----------------------------------------------------------
 # 
 # x_n                  F(x_n)           G(x_n)     P(x_n-1 < X    n
