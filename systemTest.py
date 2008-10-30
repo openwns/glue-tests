@@ -16,7 +16,7 @@ testSuite = pywns.WNSUnit.TestSuite()
 
 # create a system test
 testSuite.addTest(pywns.WNSUnit.ProbesTestSuite(sandboxPath = os.path.join('..', '..', '..', 'sandbox'),
-                                                executeable = "wns-core",
+                                                
                                                 configFile = 'config.py',
                                                 runSimulations = True,
                                                 shortDescription = 'One-on-one communication with: Copper, Glue, IP, Constanze',
@@ -24,7 +24,7 @@ testSuite.addTest(pywns.WNSUnit.ProbesTestSuite(sandboxPath = os.path.join('..',
                                                 disabledReason = ""))
 
 testSuite.addTest(pywns.WNSUnit.ProbesTestSuite(sandboxPath = os.path.join('..', '..', '..', 'sandbox'),
-                                                executeable = "wns-core",
+                                                
                                                 configFile = 'config80211.py',
                                                 runSimulations = True,
                                                 shortDescription = 'One-on-one communication with: Copper, 802.11, IP, Constanze',
