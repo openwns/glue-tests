@@ -25,11 +25,11 @@
 #
 ###############################################################################
 
-import wns.WNS
-import wns.EventScheduler
-import wns.Node
-import wns.Distribution
-import wns.evaluation.default
+import openwns
+import openwns.eventscheduler
+import openwns.node
+import openwns.distribution
+import openwns.evaluation.default
 
 import constanze.Constanze
 import constanze.Node
@@ -50,8 +50,8 @@ import copper.Copper
 
 # create an instance of the WNS configuration
 # The variable must be called WNS!!!!
-WNS = wns.WNS.WNS()
-WNS.outputStrategy = wns.WNS.OutputStrategy.DELETE
+WNS = openwns.Simulator(simulationModel = openwns.node.NodeSimulationModel())
+WNS.outputStrategy = openwns.simulator.OutputStrategy.DELETE
 
 WNS.maxSimTime = 10.0
 
@@ -66,7 +66,7 @@ meanPacketSize = 1500 * 8
 loadFactor = 0.7
 throughputPerStation = speed * loadFactor / numberOfStations
 
-class Station(wns.Node.Node):
+class Station(openwns.node.Node):
     phy = None
     dll = None
     nl = None
@@ -94,21 +94,21 @@ class Station(wns.Node.Node):
 
 # Create Nodes and components
 for i in xrange(numberOfStations):
-    station = Station(wire, wns.Distribution.Fixed(1E-5), speed, i)
-    WNS.nodes.append(station)
+    station = Station(wire, openwns.distribution.Fixed(1E-5), speed, i)
+    WNS.simulationModel.nodes.append(station)
 
 
 for i in xrange(numberOfStations):
     cbr = constanze.Constanze.CBR(0.01, throughputPerStation, meanPacketSize)
-    ipBinding = constanze.Node.IPBinding(WNS.nodes[i-1].nl.domainName, WNS.nodes[i].nl.domainName)
-    WNS.nodes[i-1].load.addTraffic(ipBinding, cbr)
-    ipListenerBinding = constanze.Node.IPListenerBinding(WNS.nodes[i-1].nl.domainName)
-    listener = constanze.Node.Listener(WNS.nodes[i-1].nl.domainName + ".listener")
-    WNS.nodes[i-1].load.addListener(ipListenerBinding, listener)
+    ipBinding = constanze.Node.IPBinding(WNS.simulationModel.nodes[i-1].nl.domainName, WNS.simulationModel.nodes[i].nl.domainName)
+    WNS.simulationModel.nodes[i-1].load.addTraffic(ipBinding, cbr)
+    ipListenerBinding = constanze.Node.IPListenerBinding(WNS.simulationModel.nodes[i-1].nl.domainName)
+    listener = constanze.Node.Listener(WNS.simulationModel.nodes[i-1].nl.domainName + ".listener")
+    WNS.simulationModel.nodes[i-1].load.addListener(ipListenerBinding, listener)
 
 # one Virtual ARP Zone
 varp = VirtualARPServer("vARP", "theOnlySubnet")
-WNS.nodes = [varp] + WNS.nodes
+WNS.simulationModel.nodes = [varp] + WNS.simulationModel.nodes
 
 vdhcp = VirtualDHCPServer("vDHCP@",
                           "theOnlySubnet",
@@ -116,9 +116,9 @@ vdhcp = VirtualDHCPServer("vDHCP@",
                           "255.255.0.0")
 
 vdns = VirtualDNSServer("vDNS", "ip.DEFAULT.GLOBAL")
-WNS.nodes.append(vdns)
+WNS.simulationModel.nodes.append(vdns)
 
-WNS.nodes.append(vdhcp)
+WNS.simulationModel.nodes.append(vdhcp)
 
 glue.evaluation.csma.installEvaluation(WNS, range(1, numberOfStations + 1))
 
@@ -138,4 +138,5 @@ constanze.evaluation.default.installEvaluation(sim = WNS,
                                                sizeResolution = 2000,
                                                throughputResolution = 10000)
 
-wns.evaluation.default.installEvaluation(sim = WNS)
+openwns.evaluation.default.installEvaluation(sim = WNS)
+openwns.setSimulator(WNS)
