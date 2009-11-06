@@ -31,8 +31,8 @@ import openwns.node
 import openwns.distribution
 import openwns.evaluation.default
 
-import constanze.Constanze
-import constanze.Node
+import constanze.traffic
+import constanze.node
 import constanze.evaluation.default
 import ip.Component
 
@@ -112,7 +112,7 @@ class Station(openwns.node.Node):
                        _dllNotification = self.dll.unicastNotification)
 
         # Traffic Generator
-        self.load = constanze.Node.ConstanzeComponent(self, "constanze")
+        self.load = constanze.node.ConstanzeComponent(self, "constanze")
 
 # Create Nodes and components
 for i in xrange(configuration.numberOfStations):
@@ -120,11 +120,11 @@ for i in xrange(configuration.numberOfStations):
     WNS.simulationModel.nodes.append(station)
 
 for i in xrange(configuration.numberOfStations):
-    cbr = constanze.Constanze.CBR(0.01, throughputPerStation, configuration.fixedPacketSize)
-    ipBinding = constanze.Node.IPBinding(WNS.simulationModel.nodes[i-1].nl.domainName, WNS.simulationModel.nodes[i].nl.domainName)
+    cbr = constanze.traffic.CBR(0.01, throughputPerStation, configuration.fixedPacketSize)
+    ipBinding = constanze.node.IPBinding(WNS.simulationModel.nodes[i-1].nl.domainName, WNS.simulationModel.nodes[i].nl.domainName)
     WNS.simulationModel.nodes[i-1].load.addTraffic(ipBinding, cbr)
-    ipListenerBinding = constanze.Node.IPListenerBinding(WNS.simulationModel.nodes[i-1].nl.domainName)
-    listener = constanze.Node.Listener(WNS.simulationModel.nodes[i-1].nl.domainName + ".listener")
+    ipListenerBinding = constanze.node.IPListenerBinding(WNS.simulationModel.nodes[i-1].nl.domainName)
+    listener = constanze.node.Listener(WNS.simulationModel.nodes[i-1].nl.domainName + ".listener")
     WNS.simulationModel.nodes[i-1].load.addListener(ipListenerBinding, listener)
 
 # one Virtual ARP Zone
