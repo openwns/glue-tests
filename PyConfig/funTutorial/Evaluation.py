@@ -27,6 +27,14 @@
 
 from openwns.evaluation import *
 
+def toStaTypeId(stationType):
+    if stationType == "router":
+        return 1
+    elif stationType == "client":
+        return 2
+    else:
+        assert false, "Unknown station type"
+
 def installEvaluation(sim, loggingStations, dll,
                       maxPacketDelay, maxPacketSize, maxBitThroughput, maxPacketThroughput,
                       delayResolution, sizeResolution, throughputResolution, resolution=1000):
@@ -35,7 +43,7 @@ def installEvaluation(sim, loggingStations, dll,
     sourceName = 'traffic.endToEnd.packet.incoming.size'
     node = openwns.evaluation.createSourceNode(sim, sourceName)
     node.appendChildren(Enumerated(by = 'DLL.StationType',
-                                   keys = [1, 2],
+                                   keys = [toStaTypeId("router"), toStaTypeId("client")],
                                    names = ['router', 'client'],
                                    format = "DLL.StationType_%s"))
     node.getLeafs().appendChildren(PDF(name = sourceName,
@@ -47,7 +55,7 @@ def installEvaluation(sim, loggingStations, dll,
     sourceName = 'traffic.endToEnd.packet.incoming.delay'
     node = openwns.evaluation.createSourceNode(sim, sourceName)
     node.appendChildren(Enumerated(by = 'DLL.StationType',
-                                   keys = [1, 2],
+                                   keys = [toStaTypeId("router"), toStaTypeId("client")],
                                    names = ['router', 'client'],
                                    format = "DLL.StationType_%s"))
     node.getLeafs().appendChildren(PDF(name = sourceName,
@@ -59,7 +67,7 @@ def installEvaluation(sim, loggingStations, dll,
     sourceName = 'traffic.endToEnd.window.incoming.bitThroughput'
     node = openwns.evaluation.createSourceNode(sim, sourceName)
     node.appendChildren(Enumerated(by = 'DLL.StationType',
-                                   keys = [1, 2],
+                                   keys = [toStaTypeId("router"), toStaTypeId("client")],
                                    names = ['router', 'client'],
                                    format = "DLL.StationType_%s"))
     node.getLeafs().appendChildren(PDF(name = sourceName,
@@ -74,7 +82,7 @@ def installEvaluation(sim, loggingStations, dll,
         sourceName = 'ip.%s.packet.incoming.delay' % dist
         node = openwns.evaluation.createSourceNode(sim, sourceName )
         node.appendChildren(Enumerated(by = 'DLL.StationType',
-                                       keys = [1, 2],
+                                       keys = [toStaTypeId("router"), toStaTypeId("client")],
                                        names = ['router', 'client'],
                                        format = "DLL.StationType_%s"))
         node.getLeafs().appendChildren(PDF(name = sourceName,
@@ -86,7 +94,7 @@ def installEvaluation(sim, loggingStations, dll,
         sourceName = 'ip.%s.packet.outgoing.delay' % dist
         node = openwns.evaluation.createSourceNode(sim, sourceName )
         node.appendChildren(Enumerated(by = 'DLL.StationType',
-                                       keys = [1, 2],
+                                       keys = [toStaTypeId("router"), toStaTypeId("client")],
                                        names = ['router', 'client'],
                                        format = "DLL.StationType_%s"))
         node.getLeafs().appendChildren(PDF(name = sourceName,
@@ -98,7 +106,7 @@ def installEvaluation(sim, loggingStations, dll,
         sourceName = 'ip.%s.packet.incoming.size' % dist
         node = openwns.evaluation.createSourceNode(sim, sourceName )
         node.appendChildren(Enumerated(by = 'DLL.StationType',
-                                       keys = [1, 2],
+                                       keys = [toStaTypeId("router"), toStaTypeId("client")],
                                        names = ['router', 'client'],
                                        format = "DLL.StationType_%s"))
         node.getLeafs().appendChildren(PDF(name = sourceName,
@@ -110,7 +118,7 @@ def installEvaluation(sim, loggingStations, dll,
         sourceName = 'ip.%s.packet.outgoing.size' % dist
         node = openwns.evaluation.createSourceNode(sim, sourceName )
         node.appendChildren(Enumerated(by = 'DLL.StationType',
-                                       keys = [1, 2],
+                                       keys = [toStaTypeId("router"), toStaTypeId("client")],
                                        names = ['router', 'client'],
                                        format = "DLL.StationType_%s"))
         node.getLeafs().appendChildren(PDF(name = sourceName,
@@ -124,7 +132,7 @@ def installEvaluation(sim, loggingStations, dll,
             sourceName = 'ip.%s.window.%s.bitThroughput' % (dist, direction)
             node = openwns.evaluation.createSourceNode(sim, sourceName )
             node.appendChildren(Enumerated(by = 'DLL.StationType',
-                                           keys = [1, 2],
+                                           keys = [toStaTypeId("router"), toStaTypeId("client")],
                                            names = ['router', 'client'],
                                            format = "DLL.StationType_%s"))
             node.getLeafs().appendChildren(PDF(name = sourceName,
@@ -142,7 +150,7 @@ def installEvaluation(sim, loggingStations, dll,
         node = openwns.evaluation.createSourceNode(sim, sourceName)
         node.appendChildren(Accept(by = 'openwns.node.Node.id', ifIn = loggingStations))
         node.appendChildren(Enumerated(by = 'DLL.StationType',
-                                           keys = [1, 2],
+                                           keys = [toStaTypeId("router"), toStaTypeId("client")],
                                            names = ['router', 'client'],
                                            format = "DLL.StationType_%s"))
         node.getLeafs().appendChildren(PDF(name = sourceName,
@@ -155,7 +163,7 @@ def installEvaluation(sim, loggingStations, dll,
         node = openwns.evaluation.createSourceNode(sim, sourceName)
         node.appendChildren(Accept(by = 'openwns.node.Node.id', ifIn = loggingStations))
         node.appendChildren(Enumerated(by = 'DLL.StationType',
-                                           keys = [1, 2],
+                                           keys = [toStaTypeId("router"), toStaTypeId("client")],
                                            names = ['router', 'client'],
                                            format = "DLL.StationType_%s"))
         node.getLeafs().appendChildren(PDF(name = sourceName,
@@ -171,7 +179,7 @@ def installEvaluation(sim, loggingStations, dll,
         node = openwns.evaluation.createSourceNode(sim, sourceName)
         node.appendChildren(Accept(by = 'openwns.node.Node.id', ifIn = loggingStations))
         node.appendChildren(Enumerated(by = 'DLL.StationType',
-                                           keys = [1, 2],
+                                           keys = [toStaTypeId("router"), toStaTypeId("client")],
                                            names = ['router', 'client'],
                                            format = "DLL.StationType_%s"))
         node.getLeafs().appendChildren(PDF(name = sourceName,
@@ -199,7 +207,7 @@ def installEvaluation(sim, loggingStations, dll,
                 node = openwns.evaluation.createSourceNode(sim, sourceName)
                 node.appendChildren(Accept(by = 'openwns.node.Node.id', ifIn = loggingStations))
                 node.appendChildren(Enumerated(by = 'DLL.StationType',
-                                               keys = [1, 2],
+                                               keys = [toStaTypeId("router"), toStaTypeId("client")],
                                                names = ['router', 'client'],
                                                format = "DLL.StationType_%s"))
                 node.getLeafs().appendChildren(Moments())
@@ -210,7 +218,7 @@ def installEvaluation(sim, loggingStations, dll,
         node = openwns.evaluation.createSourceNode(sim, sourceName)
         node.appendChildren(Accept(by = 'openwns.node.Node.id', ifIn = loggingStations))
         node.appendChildren(Enumerated(by = 'DLL.StationType',
-                                           keys = [1, 2],
+                                           keys = [toStaTypeId("router"), toStaTypeId("client")],
                                            names = ['router', 'client'],
                                            format = "DLL.StationType_%s"))
         node.getLeafs().appendChildren(PDF(name = sourceName,
@@ -223,7 +231,7 @@ def installEvaluation(sim, loggingStations, dll,
         node = openwns.evaluation.createSourceNode(sim, sourceName)
         node.appendChildren(Accept(by = 'openwns.node.Node.id', ifIn = loggingStations))
         node.appendChildren(Enumerated(by = 'DLL.StationType',
-                                           keys = [1, 2],
+                                           keys = [toStaTypeId("router"), toStaTypeId("client")],
                                            names = ['router', 'client'],
                                            format = "DLL.StationType_%s"))
         node.getLeafs().appendChildren(PDF(name = sourceName,
@@ -236,7 +244,7 @@ def installEvaluation(sim, loggingStations, dll,
         node = openwns.evaluation.createSourceNode(sim, sourceName)
         node.appendChildren(Accept(by = 'openwns.node.Node.id', ifIn = loggingStations))
         node.appendChildren(Enumerated(by = 'DLL.StationType',
-                                           keys = [1, 2],
+                                           keys = [toStaTypeId("router"), toStaTypeId("client")],
                                            names = ['router', 'client'],
                                            format = "DLL.StationType_%s"))
         node.getLeafs().appendChildren(PDF(name = sourceName,
@@ -249,7 +257,7 @@ def installEvaluation(sim, loggingStations, dll,
         node = openwns.evaluation.createSourceNode(sim, sourceName)
         node.appendChildren(Accept(by = 'openwns.node.Node.id', ifIn = loggingStations))
         node.appendChildren(Enumerated(by = 'DLL.StationType',
-                                           keys = [1, 2],
+                                           keys = [toStaTypeId("router"), toStaTypeId("client")],
                                            names = ['router', 'client'],
                                            format = "DLL.StationType_%s"))
         node.getLeafs().appendChildren(PDF(name = sourceName,

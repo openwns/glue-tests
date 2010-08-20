@@ -4,3 +4,14 @@ output_*
 stderr.log
 stdout.log
 output
+testResults_config1.py.csv
+testResults_config2.py.csv
+testResults_config3.py.csv
+testResults_config4.py.csv
+testResults_config5.py.csv
+testResults_config6.py.csv
+testResults_config7.py.csv
+testResults_config80211.py.csv
+testResults_config8.py.csv
+testResults_config9.py.csv
+testResults_config.py.csv

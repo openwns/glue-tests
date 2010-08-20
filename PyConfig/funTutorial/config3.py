@@ -61,7 +61,6 @@ import Evaluation
 
 
 from openwns.wrowser.simdb.SimConfig import params
-params.experiment = "Experiment1"
 
 # Main configuration parameters:
 class Configuration:
@@ -127,8 +126,9 @@ class Station(openwns.node.Node):
                                              speed)
 
         # Data Link Layer (DLL)
-        self.dll = eval('Tutorial.%s(self, "ShortCut", self.phy.dataTransmission, self.phy.notification, stationType = stationType)' % params.experiment)
-
+        self.dll = Tutorial.Experiment3(self, "ShortCut", 
+                                        self.phy.dataTransmission, self.phy.notification, 
+                                        stationType = stationType)
 
         # Network Layer (NL)
         domainName = "node" + str(id) + ".glue.wns.org"
