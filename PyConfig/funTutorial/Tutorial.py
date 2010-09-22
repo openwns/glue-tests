@@ -111,9 +111,9 @@ class Experiment4(glue.Glue.Component2Copper):
 
         buffer = openwns.FUN.Node("unicastBuffer",
                                   openwns.Buffer.Dropping(size = 100,
-                                                          lossRatioProbeName = 'glue.unicastBufferLoss',
-                                                          sizeProbeName = 'glue.unicastBufferSize',
-                                                          parentLogger = self.logger))
+                                                  lossRatioProbeName = 'glue.unicastBufferLoss',
+                                                  sizeProbeName = 'glue.unicastBufferSize',
+                                                  parentLogger = self.logger))
 
         aloha = openwns.FUN.Node("aloha",
                                  glue.Glue.Aloha(commandName = "aloha",
@@ -146,9 +146,9 @@ class Experiment5(glue.Glue.Component2Copper):
 
         buffer = openwns.FUN.Node("unicastBuffer",
                                   openwns.Buffer.Dropping(size = 100,
-                                                          lossRatioProbeName = 'glue.unicastBufferLoss',
-                                                          sizeProbeName = 'glue.unicastBufferSize',
-                                                          parentLogger = self.logger))
+                                                  lossRatioProbeName = 'glue.unicastBufferLoss',
+                                                  sizeProbeName = 'glue.unicastBufferSize',
+                                                  parentLogger = self.logger))
 
         topWindowProbe = openwns.FUN.Node("topWindowProbe",
                                           openwns.Probe.Window("glue.topWindowProbe",
@@ -212,9 +212,9 @@ class Experiment6(glue.Glue.Component2Copper):
 
         buffer = openwns.FUN.Node("unicastBuffer",
                                   openwns.Buffer.Dropping(size = 100,
-                                                          lossRatioProbeName = 'glue.unicastBufferLoss',
-                                                          sizeProbeName = 'glue.unicastBufferSize',
-                                                          parentLogger = self.logger))
+                                                  lossRatioProbeName = 'glue.unicastBufferLoss',
+                                                  sizeProbeName = 'glue.unicastBufferSize',
+                                                  parentLogger = self.logger))
 
         topWindowProbe = openwns.FUN.Node("topWindowProbe",
                                           openwns.Probe.Window("glue.topWindowProbe",
@@ -298,9 +298,9 @@ class Experiment7(glue.Glue.Component2Copper):
 
         buffer = openwns.FUN.Node("unicastBuffer",
                                   openwns.Buffer.Dropping(size = 100,
-                                                          lossRatioProbeName = 'glue.unicastBufferLoss',
-                                                          sizeProbeName = 'glue.unicastBufferSize',
-                                                          parentLogger = self.logger))
+                                                  lossRatioProbeName = 'glue.unicastBufferLoss',
+                                                  sizeProbeName = 'glue.unicastBufferSize',
+                                                  parentLogger = self.logger))
 
         topWindowProbe = openwns.FUN.Node("topWindowProbe",
                                           openwns.Probe.Window("glue.topWindowProbe",
@@ -316,9 +316,11 @@ class Experiment7(glue.Glue.Component2Copper):
         arqFU = openwns.ARQ.StopAndWait(resendTimeout=0.003,
                                         parentLogger = self.logger)
 
-        arqFlowSeparatorFU = openwns.FlowSeparator.FlowSeparator(glue.KeyBuilder.KeyBuilder("unicastUpperConvergence"),
-                                                                 openwns.FlowSeparator.CreateOnFirstCompound(openwns.FlowSeparator.Config('arq', arqFU)),
-                                                                 parentLogger = self.logger)
+        arqFlowSeparatorFU = openwns.FlowSeparator.FlowSeparator(
+                                glue.KeyBuilder.KeyBuilder("unicastUpperConvergence"),
+                                openwns.FlowSeparator.CreateOnFirstCompound(
+                                    openwns.FlowSeparator.Config('arq', arqFU)),
+                                parentLogger = self.logger)
 
         arqFlowSeparator = openwns.FUN.Node('flowSeparator', arqFlowSeparatorFU)
 
@@ -390,9 +392,9 @@ class Experiment8(glue.Glue.Component2Copper):
 
         buffer = openwns.FUN.Node("unicastBuffer",
                                   openwns.Buffer.Dropping(size = 100,
-                                                          lossRatioProbeName = 'glue.unicastBufferLoss',
-                                                          sizeProbeName = 'glue.unicastBufferSize',
-                                                          parentLogger = self.logger))
+                                                  lossRatioProbeName = 'glue.unicastBufferLoss',
+                                                  sizeProbeName = 'glue.unicastBufferSize',
+                                                  parentLogger = self.logger))
 
         topWindowProbe = openwns.FUN.Node("topWindowProbe",
                                           openwns.Probe.Window("glue.topWindowProbe",
@@ -408,9 +410,11 @@ class Experiment8(glue.Glue.Component2Copper):
         arqFU = openwns.ARQ.StopAndWaitRC(resendTimeout=0.003,
                                           parentLogger = self.logger)
 
-        flowSeparatorFU = openwns.FlowSeparator.FlowSeparator(glue.KeyBuilder.KeyBuilder("unicastUpperConvergence"),
-                                                              openwns.FlowSeparator.CreateOnFirstCompound(openwns.FlowSeparator.Config('arq', arqFU)),
-                                                              parentLogger = self.logger)
+        flowSeparatorFU = openwns.FlowSeparator.FlowSeparator(
+                                glue.KeyBuilder.KeyBuilder("unicastUpperConvergence"),
+                                openwns.FlowSeparator.CreateOnFirstCompound(
+                                    openwns.FlowSeparator.Config('arq', arqFU)),
+                                parentLogger = self.logger)
 
         flowSeparator = openwns.FUN.Node('flowSeparator', flowSeparatorFU)
 
@@ -492,9 +496,9 @@ class Experiment9(glue.Glue.Component2Copper):
 
         buffer = openwns.FUN.Node("unicastBuffer",
                                   openwns.Buffer.Dropping(size = 100,
-                                                          lossRatioProbeName = 'glue.unicastBufferLoss',
-                                                          sizeProbeName = 'glue.unicastBufferSize',
-                                                          parentLogger = self.logger))
+                                                  lossRatioProbeName = 'glue.unicastBufferLoss',
+                                                  sizeProbeName = 'glue.unicastBufferSize',
+                                                  parentLogger = self.logger))
 
         topWindowProbe = openwns.FUN.Node("topWindowProbe",
                                           openwns.Probe.Window("glue.topWindowProbe",
@@ -528,9 +532,11 @@ class Experiment9(glue.Glue.Component2Copper):
                                                                openwns.ARQ.StopAndWaitRC.Ack,
                                                                openwns.ARQ.StopAndWaitRC.Ack))
 
-        flowSeparatorFU = openwns.FlowSeparator.FlowSeparator(glue.KeyBuilder.KeyBuilder("unicastUpperConvergence"),
-                                                              openwns.FlowSeparator.CreateOnFirstCompound(openwns.FlowSeparator.Config('group', groupFU)),
-                                                              parentLogger = self.logger)
+        flowSeparatorFU = openwns.FlowSeparator.FlowSeparator(
+                                glue.KeyBuilder.KeyBuilder("unicastUpperConvergence"),
+                                openwns.FlowSeparator.CreateOnFirstCompound(
+                                    openwns.FlowSeparator.Config('arq', arqFU)),
+                                parentLogger = self.logger)
 
         flowSeparator = openwns.FUN.Node('flowSeparator', flowSeparatorFU)
 
