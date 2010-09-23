@@ -535,7 +535,7 @@ class Experiment9(glue.Glue.Component2Copper):
         flowSeparatorFU = openwns.FlowSeparator.FlowSeparator(
                                 glue.KeyBuilder.KeyBuilder("unicastUpperConvergence"),
                                 openwns.FlowSeparator.CreateOnFirstCompound(
-                                    openwns.FlowSeparator.Config('arq', arqFU)),
+                                    openwns.FlowSeparator.Config('group', groupFU)),
                                 parentLogger = self.logger)
 
         flowSeparator = openwns.FUN.Node('flowSeparator', flowSeparatorFU)
