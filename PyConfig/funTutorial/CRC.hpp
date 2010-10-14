@@ -28,6 +28,11 @@
 #pragma once
 
 #include <WNS/ldk/FunctionalUnit.hpp>
+#include <WNS/ldk/CommandTypeSpecifier.hpp>
+#include <WNS/ldk/HasReceptor.hpp>
+#include <WNS/ldk/HasConnector.hpp>
+#include <WNS/ldk/HasDeliverer.hpp>
+#include <WNS/Cloneable.hpp>
 
 namespace glue {
 
@@ -35,21 +40,21 @@ class CRC :
     public virtual wns::ldk::FunctionalUnit,
     public wns::ldk::CommandTypeSpecifier<>,
     public wns::ldk::HasReceptor<>,
-    public wns::ldk::HasConector<>,
+    public wns::ldk::HasConnector<>,
     public wns::ldk::HasDeliverer<>,
-    public wns::ldk::Cloneable<CRC>
+    public wns::Cloneable<CRC>
 {
 public:
     CRC(wns::ldk::fun::FUN*, const wns::pyconfig::View&);
 
     void
-    doSendData(const CompoundPtr&);
+    doSendData(const wns::ldk::CompoundPtr&);
 
     void
-    doOnData(const CompoundPtr&);
+    doOnData(const wns::ldk::CompoundPtr&);
 
     bool
-    doIsAccepting(const CompoundPtr&) const;
+    doIsAccepting(const wns::ldk::CompoundPtr&) const;
 
     void
     doWakeup();

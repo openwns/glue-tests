@@ -29,14 +29,14 @@
 
 using namespace glue;
 
-STATIC_FACTORY_REGISTER_WITH_CREATOR(CRC, FunctionalUnit, "glue.CRC", FUNConfigCreator);
+STATIC_FACTORY_REGISTER_WITH_CREATOR(CRC, wns::ldk::FunctionalUnit, "glue.CRC", wns::ldk::FUNConfigCreator);
 
-CRC::CRC(fun::FUN* fuNet, const wns::pyconfig::View& config):
+CRC::CRC(wns::ldk::fun::FUN* fuNet, const wns::pyconfig::View& config):
     wns::ldk::CommandTypeSpecifier<>(fuNet),
     wns::ldk::HasReceptor<>(),
     wns::ldk::HasConnector<>(),
     wns::ldk::HasDeliverer<>(),
-    wns::ldk::Cloneable<CRC>()
+    wns::Cloneable<CRC>()
 {
 }
 
