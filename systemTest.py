@@ -32,6 +32,14 @@ testSuite.addTest(pywns.WNSUnit.ProbesTestSuite(sandboxPath = os.path.join('..',
                                                 disabledReason = ""))
 
 testSuite.addTest(pywns.WNSUnit.ProbesTestSuite(sandboxPath = os.path.join('..', '..', '..', 'sandbox'),
+
+                                                configFile = 'configOFDMA.py',
+                                                runSimulations = True,
+                                                shortDescription = 'Glue using a radio transmitter',
+                                                disabled = False,
+                                                disabledReason = ""))
+
+testSuite.addTest(pywns.WNSUnit.ProbesTestSuite(sandboxPath = os.path.join('..', '..', '..', 'sandbox'),
                                                 workingDir = "PyConfig/funTutorial",
                                                 configFile = 'config1.py',
                                                 runSimulations = True,

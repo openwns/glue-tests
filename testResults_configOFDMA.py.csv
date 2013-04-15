@@ -1,0 +1,4 @@
+id, name
+./referenceOutput_configOFDMA.py, REFERENCE
+./output_dbg_configOFDMA.py, DBG
+./output_opt_configOFDMA.py, OPT
